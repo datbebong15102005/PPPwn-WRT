@@ -122,19 +122,19 @@ XFNWB=true' | tee pconfig.cfg
 
 
 # Download scripts
-wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/run.sh
+wget https://github.com/datanonymus/PPPwn-WRT/raw/main/run.sh
 if [ $? -ne 0 ]; then
     echo "Failed to download run.sh"
     #exit 1
 fi
 
-wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/kill.sh
+wget https://github.com/datanonymus/PPPwn-WRT/raw/main/kill.sh
 if [ $? -ne 0 ]; then
     echo "Failed to download kill.sh"
     #exit 1
 fi
 
-wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/dtlink.sh
+wget https://github.com/datanonymus/PPPwn-WRT/raw/main/dtlink.sh
 if [ $? -ne 0 ]; then
     echo "Failed to download dtlink.sh"
     #exit 1
@@ -145,7 +145,7 @@ fi
 machine_arch=$(uname -m)
 case "$machine_arch" in
     *arch64*)
-        wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/pppwn_arch64
+        wget https://github.com/datanonymus/PPPwn-WRT/raw/main/pppwn_arch64
         if [ $? -ne 0 ]; then
             echo "Failed to download pppwn_arch64"
             #exit 1
@@ -153,7 +153,7 @@ case "$machine_arch" in
         chmod +x pppwn_arch64
         ;;
     *armv7*)
-        wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/pppwn_armv7
+        wget https://github.com/datanonymus/PPPwn-WRT/raw/main/pppwn_armv7
         if [ $? -ne 0 ]; then
             echo "Failed to download pppwn_armv7"
             #exit 1
@@ -161,7 +161,7 @@ case "$machine_arch" in
         chmod +x pppwn_armv7
         ;;
     *x86_64*)
-        wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/pppwn_x86_64
+        wget https://github.com/datanonymus/PPPwn-WRT/raw/main/pppwn_x86_64
         if [ $? -ne 0 ]; then
             echo "Failed to download pppwn_x86_64"
             #exit 1
@@ -172,14 +172,14 @@ case "$machine_arch" in
         opkg install lscpu
         BYTE_ORDER=$(lscpu | grep "Byte Order" | awk '{print $3, $4}')
         if [ "$BYTE_ORDER" = "Big Endian" ]; then
-            wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/pppwn_mips
+            wget https://github.com/datanonymus/PPPwn-WRT/raw/main/pppwn_mips
             if [ $? -ne 0 ]; then
                 echo "Failed to download pppwn_mips"
                 #exit 1
             fi
             chmod +x pppwn_mips
         else
-            wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/pppwn_mipsel
+            wget https://github.com/datanonymus/PPPwn-WRT/raw/main/pppwn_mipsel
             if [ $? -ne 0 ]; then
                 echo "Failed to download pppwn_mipsel"
                 #exit 1
@@ -219,13 +219,13 @@ while true; do
         echo "Selected firmware: $firmware_version (numeric: $firmware_numeric)"
 
         # Download stage1 and stage2
-        wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/stage1_${firmware_numeric}.bin
+        wget https://github.com/datanonymus/PPPwn-WRT/raw/main/stage1_${firmware_numeric}.bin
         if [ $? -ne 0 ]; then
             echo "Failed to download stage1_${firmware_numeric}.bin"
             #exit 1
         fi
 
-        wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/stage2_${firmware_numeric}.bin
+        wget https://github.com/datanonymus/PPPwn-WRT/raw/main/stage2_${firmware_numeric}.bin
         if [ $? -ne 0 ]; then
             echo "Failed to download stage2_${firmware_numeric}.bin"
             #exit 1
@@ -807,22 +807,22 @@ while true; do
         [Yy])
 
             # download web panel
-            wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/index.php
+            wget https://github.com/datanonymus/PPPwn-WRT/raw/main/index.php
             if [ $? -ne 0 ]; then
                 echo "Failed to download index.php"
                 #exit 1
             fi
-            wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/pconfig.php
+            wget https://github.com/datanonymus/PPPwn-WRT/raw/main/pconfig.php
             if [ $? -ne 0 ]; then
                 echo "Failed to download pconfig.php"
                 #exit 1
             fi
-            wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/network.php
+            wget https://github.com/datanonymus/PPPwn-WRT/raw/main/network.php
             if [ $? -ne 0 ]; then
                 echo "Failed to download network.php"
                 #exit 1
             fi
-            wget https://github.com/datbebong15102005/PPPwn-WRT/raw/main/payloads.php
+            wget https://github.com/datanonymus/PPPwn-WRT/raw/main/payloads.php
             if [ $? -ne 0 ]; then
                 echo "Failed to download payloads.php"
                 #exit 1
