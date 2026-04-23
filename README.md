@@ -130,7 +130,7 @@ If your ISP places you behind a Carrier-Grade NAT (CGNAT), traditional port forw
 ## Credits & Acknowledgements
 
 This project relies on the amazing work of others. Special thanks to:
-- **[datbebong15102005](https://github.com/datbebong15102005/PPPwn-WRT)** - Redesigned the logic flow, added Link Speed State Machine, fixed Rest Mode/Chiaki functionality, and Nmap loop fix.
+- **[Nguyễn Trọng Đạt](https://github.com/datanonymus/PPPwn-WRT)** - Redesigned the logic flow, added Link Speed State Machine, fixed Rest Mode/Chiaki functionality, and Nmap loop fix.
 - **[MODDEDWARFARE](https://github.com/MODDEDWARFARE/PPPwn_WRT)** - For the original OpenWRT script foundation.
 - **[stooged](https://github.com/stooged/PI-Pwn)** - For the Pi-Pwn project.
 - **[TheFlow0](https://github.com/TheOfficialFloW/PPPwn)** - For the legendary PPPwn exploit.
