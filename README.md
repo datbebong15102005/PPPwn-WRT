@@ -123,6 +123,29 @@ If your ISP places you behind a Carrier-Grade NAT (CGNAT), traditional port forw
   * Check the **Masquerading** box *(This is the magic trick that allows VPN traffic to seamlessly NAT into your LAN without complex static routing!)*.
   * Click **Save & Apply**.
 
+* **Edit port forwarding:**
+  * In **Firewall** page, go to **Port Forwarding**
+  * Add 2 Port Forwarding like this:
+    * Port Forwarding 1:
+      * Name: PS4_Remote_Play
+      * Protocol: TCP & UDP
+      * Source zone: Your VPN zone
+      * External port: 9295-9304
+      * Destination zone: LAN interface
+      * Internal IP address: Type your PS4 IP address
+      * Internal port: 9295-9304
+      * Click **Save** button
+    * Port Forwarding 2:
+      * Name: PS4_Wakeup_UDP
+      * Protocol: UDP
+      * Source zone: Your VPN zone
+      * External port: 987
+      * Destination zone: LAN interface
+      * Internal IP address: Type your PS4 IP address
+      * Internal port: 987
+      * Click **Save** button
+  * Click **Save & Apply** button
+
 **Done!** You can now wake up and play your PS4 using Chiaki via the VPN IP address, completely bypassing your ISP's CGNAT!
 
 ---
